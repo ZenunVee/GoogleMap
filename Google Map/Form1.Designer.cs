@@ -62,17 +62,21 @@
             // 
             // staticBtn
             // 
+            this.staticBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.staticBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.staticBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staticBtn.Location = new System.Drawing.Point(12, 210);
+            this.staticBtn.Margin = new System.Windows.Forms.Padding(0);
             this.staticBtn.Name = "staticBtn";
             this.staticBtn.Size = new System.Drawing.Size(125, 71);
             this.staticBtn.TabIndex = 2;
             this.staticBtn.Text = "Static Map";
-            this.staticBtn.UseVisualStyleBackColor = true;
+            this.staticBtn.UseVisualStyleBackColor = false;
             this.staticBtn.Click += new System.EventHandler(this.staticBtn_Click);
             // 
             // strtBtn
             // 
+            this.strtBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.strtBtn.FlatAppearance.BorderSize = 2;
             this.strtBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.strtBtn.Location = new System.Drawing.Point(371, 210);
@@ -80,7 +84,7 @@
             this.strtBtn.Size = new System.Drawing.Size(125, 71);
             this.strtBtn.TabIndex = 3;
             this.strtBtn.Text = "Street View ";
-            this.strtBtn.UseVisualStyleBackColor = true;
+            this.strtBtn.UseVisualStyleBackColor = false;
             this.strtBtn.Click += new System.EventHandler(this.strtBtn_Click);
             // 
             // adrsTxt
@@ -94,6 +98,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -113,20 +118,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 213);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(143, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(64, 24);
             this.label2.TabIndex = 11;
             this.label2.Text = "Zoom";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(502, 213);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(502, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.Size = new System.Drawing.Size(164, 24);
             this.label3.TabIndex = 13;
             this.label3.Text = "Heading (Angle)";
             // 
