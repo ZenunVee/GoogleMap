@@ -27,7 +27,7 @@ namespace Google_Map
 
 
 
-        string address;
+        public string address;
         string zoom;
         int heading;
 
@@ -40,6 +40,7 @@ namespace Google_Map
         private void adrsTxt_TextChanged(object sender, EventArgs e)
         {
             address = adrsTxt.Text;
+            EndTxt.Text = address;
         }
 
         private void staticBtn_Click(object sender, EventArgs e)
@@ -70,16 +71,45 @@ namespace Google_Map
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            if(trackBar2.Value == 0)
-                heading = 45 + trackBar2.Value;
-
-            if (trackBar2.Value != 0)
-                heading = 45 + heading;
+            if (trackBar2.Value == 0)
+                heading = 45;
+            else if (trackBar2.Value == 1)
+                heading = 90;
+            else if (trackBar2.Value == 2)
+                heading = 135;
+            else if (trackBar2.Value == 3)
+                heading = 180;
+            else if (trackBar2.Value == 4)
+                heading = 225;
+            else if (trackBar2.Value == 5)
+                heading = 270;
+            else if (trackBar2.Value == 6)
+                heading = 315;
+            else if (trackBar2.Value == 7)
+                heading = 360;
+            
 
             requestPicStreet = WebRequest.Create("http://maps.googleapis.com/maps/api/streetview?location=" + address + "&heading=" + heading.ToString() + "&size=353x267&sensor=false");
             repsonsePicStreet = requestPicStreet.GetResponse();
             mapStreet = Image.FromStream(repsonsePicStreet.GetResponseStream());
             pictureBox2.Image = mapStreet;
+        }
+
+        private void EndTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startTxt_Click(object sender, EventArgs e)
+        {
+            startTxt.Text = address;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 directions = new Form2();
+            directions.Show();
+            
         }
 
         
