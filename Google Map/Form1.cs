@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 
+
 namespace Google_Map
 {
     public partial class Form1 : Form
@@ -28,8 +29,10 @@ namespace Google_Map
 
 
         public string address;
+        public string addressend;
         string zoom;
         int heading;
+        
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -100,17 +103,19 @@ namespace Google_Map
 
         }
 
-        private void startTxt_Click(object sender, EventArgs e)
+        private void startTxt_TextChanged(object sender, EventArgs e)
         {
-            startTxt.Text = address;
+            addressend = startTxt.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 directions = new Form2();
+            Form2 directions = new Form2(address, addressend);
             directions.Show();
             
         }
+
+        
 
         
     }
