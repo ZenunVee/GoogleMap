@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.staticBtn = new System.Windows.Forms.Button();
@@ -68,7 +69,7 @@
             // 
             // staticBtn
             // 
-            this.staticBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.staticBtn.BackColor = System.Drawing.Color.DarkGray;
             this.staticBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.staticBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staticBtn.Location = new System.Drawing.Point(12, 210);
@@ -82,7 +83,7 @@
             // 
             // strtBtn
             // 
-            this.strtBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.strtBtn.BackColor = System.Drawing.Color.DarkGray;
             this.strtBtn.FlatAppearance.BorderSize = 2;
             this.strtBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.strtBtn.Location = new System.Drawing.Point(371, 210);
@@ -114,6 +115,7 @@
             // 
             // trackBar1
             // 
+            this.trackBar1.BackColor = System.Drawing.Color.Snow;
             this.trackBar1.Location = new System.Drawing.Point(143, 236);
             this.trackBar1.Maximum = 15;
             this.trackBar1.Name = "trackBar1";
@@ -145,6 +147,7 @@
             // 
             // trackBar2
             // 
+            this.trackBar2.BackColor = System.Drawing.Color.Snow;
             this.trackBar2.Location = new System.Drawing.Point(503, 236);
             this.trackBar2.Maximum = 7;
             this.trackBar2.Name = "trackBar2";
@@ -181,7 +184,7 @@
             this.startTxt.Name = "startTxt";
             this.startTxt.Size = new System.Drawing.Size(163, 20);
             this.startTxt.TabIndex = 17;
-            this.startTxt.Click += new System.EventHandler(this.startTxt_Click);
+            this.startTxt.TextChanged += new System.EventHandler(this.startTxt_TextChanged);
             // 
             // label6
             // 
@@ -238,6 +241,7 @@
             this.Controls.Add(this.staticBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Google Maps";
             this.Load += new System.EventHandler(this.Form1_Load);
